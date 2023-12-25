@@ -5,10 +5,10 @@
     <title>Thymeleaf課題</title>
 </head>
 <body>
-    <h1 th:text="#{content.title}">Thymeleaf課題</h1>
-    <h2 th:text="#{content.message1}">入力画面</h2>
-    <p>値を入力してください</p>
-    <p th:if="${param.previous} != null" th:text="'前回入力された値は「' + ${param.previous[0]} + '」です。'"></p>
+    <h1 th:text="#{content.title}"></h1>
+    <h2 th:text="#{content.message1}"></h2>
+    <p th:text="#{content.message3}"></p>
+    <p th:if="${param.previous} != null" th:text="#{content.message7} + ${param.previous[0]} + #{content.message6}"></p>
     <form method="post" action="/output">
         <input type="text" name="val">
         <button type="submit">送信</button>

@@ -5,9 +5,9 @@
     <title>Thymeleaf課題</title>
 </head>
 <body>
-    <h1 th:text="#{content.title}">Thymeleaf</h1>
-    <h2 th:text="#{content.message2}">出力画面</h2>
-    <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-    <p><a th:href="@{/input(previous=${val})}">入力画面へ戻る</a></p>
+    <h1 th:text="#{content.title}"></h1>
+    <h2 th:text="#{content.message2}"></h2>
+    <p th:text="#{content.message5} + ${val} + #{content.message6}"></p>
+    <a th:href="@{/input(previous=${val})}" th:text="#{content.message4}"></a>
 </body>
 </html>
